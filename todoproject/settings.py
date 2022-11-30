@@ -25,9 +25,11 @@ SECRET_KEY = 'django-insecure-opz0xdu3j#4+29j(8@#l!nqodd*g^3g(-uupc(hiqdwx!#-^24
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://demodd.azurewebsites.net/'
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todoapp'
+    'todoapp',
+    'userauth',
 ]
 
 MIDDLEWARE = [
